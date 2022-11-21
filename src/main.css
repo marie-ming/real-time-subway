@@ -1,0 +1,8 @@
+.numberDiv {
+  background-image: url("https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg_all.png");
+  background-size: "768px auto";
+}
+.numberLine {
+  background-color: "#fafbfc";
+  opacity: 0.9;
+}

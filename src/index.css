@@ -133,7 +133,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #f8f8fa;
+  background-color: #fafbfc;
   box-sizing: border-box;
 }
 button {
@@ -151,15 +151,7 @@ a:visited {
   cursor: pointer;
 }
 img {
+  width: 768px;
+  height: auto;
   vertical-align: middle;
 }
-/* hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eee;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-} */
