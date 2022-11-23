@@ -1,8 +1,54 @@
+img {
+  width: 2000px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.body > div {
+  justify-content: center;
+}
+.titleDiv {
+  display: flex;
+  flex-direction: row;
+}
+.title {
+  font-size: 20px;
+  padding: 10px 5px;
+  margin: 2px;
+  font-weight: bold;
+}
+.lineDiv {
+  display: flex;
+  flex-direction: column;
+}
+.lineDiv > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.lineBtn {
+  font-size: 16px;
+  border-bottom: 1px solid #333333;
+  padding: 10px 5px;
+  margin: 2px;
+  width: -webkit-fill-available;
+}
+.lineBtn.clicked {
+  border-bottom: 1px solid red;
+}
+.mainDiv {
+  overflow: auto;
+}
 .numberDiv {
   background-image: url("https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg_all.png");
-  background-size: "768px auto";
+  background-size: 2000px auto;
+  width: 2000px;
 }
 .numberLine {
-  background-color: "#fafbfc";
+  background-color: #fafbfc;
   opacity: 0.9;
 }
