@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import TrainIcon from "./TrainIcon";
 
 const FirstLine = () => {
-  const [left, setLeft] = useState("1275px");
-  const [top, setTop] = useState("255px");
+  const [left, setLeft] = useState("1270px");
+  const [top, setTop] = useState("245px");
   const [display, setDisplay] = useState(false);
   const [away, setAway] = useState(true);
 
@@ -26,8 +26,8 @@ const FirstLine = () => {
       >
         <TrainIcon left={left} top={top} display={display} />
         <TrainIcon
-          left={"1225px"}
-          top={"312px"}
+          left={"1210px"}
+          top={"317px"}
           display={display}
           away={away}
         />

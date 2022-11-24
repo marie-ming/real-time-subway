@@ -5,7 +5,7 @@ const TrainDiv = styled.div`
   position: relative;
   left: ${(props) => props.left};
   top: ${(props) => props.top};
-  width: 40px;
+  width: 50px;
   background-color: #2a50ae;
   border-radius: 30%;
   padding: 0 5px;
@@ -26,7 +26,8 @@ const TrainDiv = styled.div`
     `}
 `;
 const Train = styled.img`
-  width: 40px;
+  width: 50px;
+  vertical-align: middle;
 `;
 
 const TrainIcon = ({ left, top, display, away }) => {
