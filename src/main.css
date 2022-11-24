@@ -2,15 +2,22 @@
   display: flex;
   flex-direction: column;
 }
-.body > div {
-  justify-content: center;
+.headerDiv {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 100;
+  background-color: #fafbfc;
 }
 .titleDiv {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 10px 0 5px 0;
 }
 .title {
-  font-size: 20px;
+  font-size: 35px;
   padding: 10px 5px;
   margin: 2px;
   font-weight: bold;
@@ -25,7 +32,7 @@
   justify-content: center;
 }
 .lineBtn {
-  font-size: 16px;
+  font-size: 25px;
   border-bottom: 1px solid #333333;
   padding: 10px 5px;
   margin: 2px;
@@ -36,16 +43,17 @@
 }
 .mainDiv {
   overflow: auto;
+  margin-top: 90px;
 }
 .numberDiv {
   background-image: url("https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg_all.png");
-  background-size: 2000px auto;
-  width: 2000px;
+  background-size: 3500px auto;
+  width: 3500px;
 }
 .numberLine {
   background-color: #fafbfc;
   opacity: 0.9;
-  background-size: 2000px auto;
-  width: 2000px;
-  height: 1590px;
+  background-size: 3500px auto;
+  width: 3500px;
+  height: 2782px;
 }

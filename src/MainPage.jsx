@@ -18,42 +18,44 @@ const MainPage = () => {
 
   return (
     <div className="body">
-      <div className="titleDiv">
-        <span className="title">실시간 지하철</span>
-        <button className="reload" onClick={reloadHandler}>
-          <img
-            src={reload}
-            alt="새로고침"
-            style={{ width: "15px", margin: "5px" }}
-          />
-        </button>
-      </div>
-      <div className="lineDiv">
-        <button
-          className={openMap === 0 ? "lineBtn clicked" : "lineBtn"}
-          onClick={() => setOpenMap(0)}
-        >
-          전체보기
-        </button>
-        <div>
-          <button
-            className={openMap === 1 ? "lineBtn clicked" : "lineBtn"}
-            onClick={() => setOpenMap(1)}
-          >
-            1호선
+      <div className="headerDiv">
+        <div className="titleDiv">
+          <span className="title">실시간 지하철</span>
+          <button className="reload" onClick={reloadHandler}>
+            <img
+              src={reload}
+              alt="새로고침"
+              style={{ width: "22px", margin: "8px", verticalAlign: "middle" }}
+            />
           </button>
+        </div>
+        <div className="lineDiv">
           <button
-            className={openMap === 2 ? "lineBtn clicked" : "lineBtn"}
-            onClick={() => setOpenMap(2)}
+            className={openMap === 0 ? "lineBtn clicked" : "lineBtn"}
+            onClick={() => setOpenMap(0)}
           >
-            2호선
+            전체보기
           </button>
-          <button
-            className={openMap === 3 ? "lineBtn clicked" : "lineBtn"}
-            onClick={() => setOpenMap(3)}
-          >
-            3호선
-          </button>
+          <div>
+            <button
+              className={openMap === 1 ? "lineBtn clicked" : "lineBtn"}
+              onClick={() => setOpenMap(1)}
+            >
+              1호선
+            </button>
+            <button
+              className={openMap === 2 ? "lineBtn clicked" : "lineBtn"}
+              onClick={() => setOpenMap(2)}
+            >
+              2호선
+            </button>
+            <button
+              className={openMap === 3 ? "lineBtn clicked" : "lineBtn"}
+              onClick={() => setOpenMap(3)}
+            >
+              3호선
+            </button>
+          </div>
         </div>
       </div>
       <div className="mainDiv">
