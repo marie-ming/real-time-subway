@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import TrainIcon from "./TrainIcon";
+import TrainIconBlue from "./TrainIconBlue";
+import TrainIconRed from "./TrainIconRed";
 
 const FirstLine = () => {
   const [left, setLeft] = useState("1270px");
@@ -24,8 +25,8 @@ const FirstLine = () => {
             "url('https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg1.png')",
         }}
       >
-        <TrainIcon left={left} top={top} display={display} />
-        <TrainIcon
+        <TrainIconBlue left={left} top={top} display={display} />
+        <TrainIconRed
           left={"1210px"}
           top={"317px"}
           display={display}

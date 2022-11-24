@@ -6,7 +6,7 @@ const TrainDiv = styled.div`
   left: ${(props) => props.left};
   top: ${(props) => props.top};
   width: 50px;
-  background-color: #2a50ae;
+  background-color: #c20000;
   border-radius: 30%;
   padding: 0 5px;
   box-sizing: content-box;
@@ -22,7 +22,6 @@ const TrainDiv = styled.div`
     props.away &&
     css`
       transform: rotateY(180deg);
-      background-color: #c20000;
     `}
 `;
 const Train = styled.img`
@@ -30,7 +29,7 @@ const Train = styled.img`
   vertical-align: middle;
 `;
 
-const TrainIcon = ({ left, top, display, away }) => {
+const TrainIconRed = ({ left, top, display, away }) => {
   return (
     <TrainDiv left={left} top={top} display0={display} away={away}>
       <Train src={arroeIcon} alt="화살표 아이콘" />
@@ -38,4 +37,4 @@ const TrainIcon = ({ left, top, display, away }) => {
   );
 };
 
-export default TrainIcon;
+export default TrainIconRed;
