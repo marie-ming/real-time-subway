@@ -1,33 +1,38 @@
 import styled, { css } from "styled-components";
-import trainIcon from "../train.png";
+import arroeIcon from "../arrow.png";
 
 const TrainDiv = styled.div`
   position: relative;
   left: ${(props) => props.left};
   top: ${(props) => props.top};
-  width: 32px;
-  display: block;
+  width: 40px;
+  background-color: #2a50ae;
+  border-radius: 30%;
+  padding: 0 5px;
+  box-sizing: content-box;
+  opacity: 0.6;
+  display: inline-block;
 
   ${(props) =>
     props.display0 &&
     css`
       display: none;
     `};
-`;
-const Train = styled.img`
-  width: 32px;
-
   ${(props) =>
     props.away &&
     css`
       transform: rotateY(180deg);
+      background-color: #c20000;
     `}
+`;
+const Train = styled.img`
+  width: 40px;
 `;
 
 const TrainIcon = ({ left, top, display, away }) => {
   return (
-    <TrainDiv left={left} top={top} display0={display}>
-      <Train src={trainIcon} alt="트레인아이콘" away={away} />
+    <TrainDiv left={left} top={top} display0={display} away={away}>
+      <Train src={arroeIcon} alt="화살표 아이콘" />
     </TrainDiv>
   );
 };
