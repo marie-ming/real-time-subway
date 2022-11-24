@@ -1,9 +1,3 @@
-img {
-  width: 2000px;
-  height: auto;
-  vertical-align: middle;
-}
-
 .body {
   display: flex;
   flex-direction: column;
@@ -51,4 +45,7 @@ img {
 .numberLine {
   background-color: #fafbfc;
   opacity: 0.9;
+  background-size: 2000px auto;
+  width: 2000px;
+  height: 1590px;
 }
