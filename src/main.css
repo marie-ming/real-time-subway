@@ -42,7 +42,8 @@
   border-bottom: 1px solid red;
 }
 .mainDiv {
-  overflow: auto;
+  /* overflow: auto; */
+  /* overflow: scroll; */
   margin-top: 90px;
 }
 .numberDiv {

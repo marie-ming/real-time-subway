@@ -1,7 +1,7 @@
 import FirstLine from "./components/FirstLine";
 import SecondLine from "./components/SecondLine";
 import ThirdLine from "./components/ThirdLine";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./main.css";
 import reload from "./reload.png";
 
@@ -15,6 +15,13 @@ const MainPage = () => {
     }, 0);
     console.log("새로고침");
   };
+  const onClickHander = () => {
+    setOpenMap(2);
+    window.scrollTo({ left: 1500, top: 710, behavior: "smooth" });
+  };
+  useEffect(() => {
+    window.scrollTo({ left: 1500, top: 500, behavior: "auto" });
+  }, []);
 
   return (
     <div className="body">
@@ -45,7 +52,7 @@ const MainPage = () => {
             </button>
             <button
               className={openMap === 2 ? "lineBtn clicked" : "lineBtn"}
-              onClick={() => setOpenMap(2)}
+              onClick={onClickHander}
             >
               2호선
             </button>
