@@ -1,13 +1,36 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import TrainIcon from "./TrainIcon";
 
 const SecondLine = () => {
+  const [left, setLeft] = useState("1410px");
+  const [top, setTop] = useState("955px");
+  const [display, setDisplay] = useState(false);
+  const [away, setAway] = useState(true);
+
+  const [intervalCount, setIntervalCount] = useState(0);
+  useEffect(() => {
+    setTimeout(() => {
+      setIntervalCount((count) => count + 1);
+    }, 3000);
+    console.log("3초마다 리랜더링");
+  }, [intervalCount]);
   return (
     <div className="numberDiv">
-      <img
-        src="https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg2.png"
-        alt="2호선"
+      <div
         className="numberLine"
-      ></img>
+        style={{
+          backgroundImage:
+            "url('https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg2.png')",
+        }}
+      >
+        <TrainIcon left={left} top={top} display={display} />
+        <TrainIcon
+          left={"1350px"}
+          top={"875px"}
+          display={display}
+          away={away}
+        />
+      </div>
     </div>
   );
 };
