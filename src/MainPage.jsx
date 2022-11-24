@@ -8,11 +8,19 @@ import reload from "./reload.png";
 const MainPage = () => {
   const [openMap, setOpenMap] = useState(0);
 
+  const [intervalCount, setIntervalCount] = useState(0);
+  const reloadHandler = () => {
+    setTimeout(() => {
+      setIntervalCount((count) => count + 1);
+    }, 0);
+    console.log("새로고침");
+  };
+
   return (
     <div className="body">
       <div className="titleDiv">
         <span className="title">실시간 지하철</span>
-        <button className="reload" onClick={() => window.location.reload()}>
+        <button className="reload" onClick={reloadHandler}>
           <img
             src={reload}
             alt="새로고침"
