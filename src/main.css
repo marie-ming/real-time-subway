@@ -42,14 +42,15 @@
   border-bottom: 1px solid red;
 }
 .mainDiv {
-  /* overflow: auto; */
-  /* overflow: scroll; */
-  margin-top: 90px;
+  overflow: auto;
+  height: 100vh;
+  padding-top: 200px;
 }
 .numberDiv {
   background-image: url("https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg_all.png");
   background-size: 3500px auto;
   width: 3500px;
+  height: 2782px;
 }
 .numberLine {
   background-color: #fafbfc;

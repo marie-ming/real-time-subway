@@ -1,7 +1,7 @@
 import FirstLine from "./components/FirstLine";
 import SecondLine from "./components/SecondLine";
 import ThirdLine from "./components/ThirdLine";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./main.css";
 import reload from "./reload.png";
 
@@ -15,12 +15,25 @@ const MainPage = () => {
     }, 0);
     console.log("새로고침");
   };
-  const onClickHander = () => {
+  let parentRef = useRef(null);
+  const onClickHander0 = () => {
+    setOpenMap(0);
+    parentRef.current.scrollTo({ left: 1000, top: 700 });
+  };
+  const onClickHander1 = () => {
+    setOpenMap(1);
+    parentRef.current.scrollTo({ left: 1200, top: 700 });
+  };
+  const onClickHander2 = () => {
     setOpenMap(2);
-    window.scrollTo({ left: 1500, top: 710, behavior: "smooth" });
+    parentRef.current.scrollTo({ left: 1000, top: 700 });
+  };
+  const onClickHander3 = () => {
+    setOpenMap(3);
+    parentRef.current.scrollTo({ left: 1500, top: 700 });
   };
   useEffect(() => {
-    window.scrollTo({ left: 1500, top: 500, behavior: "auto" });
+    parentRef.current.scrollTo({ left: 1200, top: 700 });
   }, []);
 
   return (
@@ -39,33 +52,33 @@ const MainPage = () => {
         <div className="lineDiv">
           <button
             className={openMap === 0 ? "lineBtn clicked" : "lineBtn"}
-            onClick={() => setOpenMap(0)}
+            onClick={onClickHander0}
           >
             전체보기
           </button>
           <div>
             <button
               className={openMap === 1 ? "lineBtn clicked" : "lineBtn"}
-              onClick={() => setOpenMap(1)}
+              onClick={onClickHander1}
             >
               1호선
             </button>
             <button
               className={openMap === 2 ? "lineBtn clicked" : "lineBtn"}
-              onClick={onClickHander}
+              onClick={onClickHander2}
             >
               2호선
             </button>
             <button
               className={openMap === 3 ? "lineBtn clicked" : "lineBtn"}
-              onClick={() => setOpenMap(3)}
+              onClick={onClickHander3}
             >
               3호선
             </button>
           </div>
         </div>
       </div>
-      <div className="mainDiv">
+      <div className="mainDiv" ref={parentRef}>
         {openMap === 0 && (
           <div className="numberDiv">
             <img
