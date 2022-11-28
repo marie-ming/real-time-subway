@@ -4,7 +4,6 @@ import ThirdLine from "./components/ThirdLine";
 import { useState, useEffect, useRef } from "react";
 import "./main.css";
 import reload from "./reload.png";
-import axios from "axios";
 
 const MainPage = () => {
   const [openMap, setOpenMap] = useState(0);
@@ -34,26 +33,9 @@ const MainPage = () => {
     parentRef.current.scrollTo({ left: 1500, top: 700 });
   };
 
-  const [data, setData] = useState(null);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "http://swopenAPI.seoul.go.kr/api/subway/49647867547368693131314c454c4f41/json/realtimePosition/0/30/2호선"
-        );
-        setData(response.data.realtimePositionList);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchData();
-
     parentRef.current.scrollTo({ left: 1200, top: 700 });
   }, []);
-
-  if (!data) {
-    return null;
-  }
 
   return (
     <div className="body">
@@ -97,12 +79,6 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      {data.map((dataaa) => (
-        <div>
-          현재역 : {dataaa.statnNm}, 종착역:{dataaa.statnTnm}, 내선1외선0:
-          {dataaa.updnLine}
-        </div>
-      ))}
       <div className="mainDiv" ref={parentRef}>
         {openMap === 0 && (
           <div className="numberDiv">

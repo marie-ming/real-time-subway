@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import arroeIcon from "../arrow.png";
 
 const TrainDiv = styled.div`
-  position: relative;
+  position: absolute;
   left: ${(props) => props.left};
   top: ${(props) => props.top};
   width: 50px;
@@ -13,11 +13,11 @@ const TrainDiv = styled.div`
   opacity: 0.6;
   display: inline-block;
 
-  ${(props) =>
+  /* ${(props) =>
     props.display0 &&
     css`
       display: none;
-    `};
+    `}; */
   ${(props) =>
     props.away &&
     css`
@@ -29,9 +29,9 @@ const Train = styled.img`
   vertical-align: middle;
 `;
 
-const TrainIconBlue = ({ left, top, display, away }) => {
+const TrainIconBlue = ({ left, top, away }) => {
   return (
-    <TrainDiv left={left} top={top} display0={display} away={away}>
+    <TrainDiv left={left} top={top} away={away}>
       <Train src={arroeIcon} alt="화살표 아이콘" />
     </TrainDiv>
   );

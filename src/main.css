@@ -53,6 +53,7 @@
   height: 2782px;
 }
 .numberLine {
+  position: relative;
   background-color: #fafbfc;
   opacity: 0.9;
   background-size: 3500px auto;
