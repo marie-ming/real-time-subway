@@ -1,37 +1,262 @@
 {
   "inLine": [
     {
+      "name": "이대",
+      "left": "1275px",
+      "top": "962px",
+      "away": 0
+    },
+    {
+      "name": "아현",
+      "left": "1347px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "충정로",
       "left": "1410px",
-      "top": "955px"
-    },{
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "시청",
-      "left": "1440px",
-      "top": "955px"
-    },{
+      "left": "1542px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "을지로입구",
-      "left": "1450px",
-      "top": "955px"
-    },{
+      "left": "1600px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "을지로3가",
-      "left": "1470px",
-      "top": "955px"
-    },{
+      "left": "1663px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "을지로4가",
-      "left": "1490px",
-      "top": "955px"
-    },{
+      "left": "1735px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "동대문역사문화공원",
-      "left": "1510px",
-      "top": "955px"
-    },{
+      "left": "1810px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "신당",
-      "left": "1530px",
-      "top": "955px"
-    },{
+      "left": "1930px",
+      "top": "960px",
+      "away": 0
+    },
+    {
       "name": "상왕십리",
-      "left": "1550px",
-      "top": "955px"
+      "left": "2038px",
+      "top": "960px",
+      "away": 0
+    },
+    {
+      "name": "왕십리",
+      "left": "2120px",
+      "top": "960px",
+      "away": 0
+    },
+    {
+      "name": "한양대",
+      "left": "2190px",
+      "top": "985px",
+      "away": "rotate(40deg)"
+    },
+    {
+      "name": "뚝섬",
+      "left": "2225px",
+      "top": "1030px",
+      "away": "rotate(70deg)"
+    },
+    {
+      "name": "성수",
+      "left": "2230px",
+      "top": "1105px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "건대입구",
+      "left": "2230px",
+      "top": "1200px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "구의",
+      "left": "2230px",
+      "top": "1265px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "강변",
+      "left": "2230px",
+      "top": "1313px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "잠실나루",
+      "left": "2230px",
+      "top": "1440px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "잠실",
+      "left": "2230px",
+      "top": "1533px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "잠실새내",
+      "left": "2230px",
+      "top": "1614px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "종합운동장",
+      "left": "2230px",
+      "top": "1688px",
+      "away": "rotate(90deg)"
+    },
+    {
+      "name": "삼성",
+      "left": "2190px",
+      "top": "1747px",
+      "away": "rotate(150deg)"
+    },
+    {
+      "name": "선릉",
+      "left": "2136px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "역삼",
+      "left": "2085px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "강남",
+      "left": "2035px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "교대",
+      "left": "1915px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "서초",
+      "left": "1862px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "방배",
+      "left": "1796px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "사당",
+      "left": "1735px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "낙성대",
+      "left": "1630px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "서울대입구",
+      "left": "1520px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "봉천",
+      "left": "1415px",
+      "top": "1765px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "신림",
+      "left": "1308px",
+      "top": "1775px",
+      "away": "rotate(180deg)"
+    },
+    {
+      "name": "신대방",
+      "left": "1260px",
+      "top": "1755px",
+      "away": "rotate(215deg)"
+    },
+    {
+      "name": "구로디지털단지",
+      "left": "1215px",
+      "top": "1707px",
+      "away": "rotate(245deg)"
+    },
+    {
+      "name": "대림",
+      "left": "1215px",
+      "top": "1635px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "신도림",
+      "left": "1215px",
+      "top": "1495px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "문래",
+      "left": "1215px",
+      "top": "1440px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "영등포구청",
+      "left": "1215px",
+      "top": "1395px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "당산",
+      "left": "1215px",
+      "top": "1395px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "합정",
+      "left": "1215px",
+      "top": "1190px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "홍대입구",
+      "left": "1215px",
+      "top": "1090px",
+      "away": "rotate(270deg)"
+    },
+    {
+      "name": "신촌",
+      "left": "1233px",
+      "top": "1002px",
+      "away": "rotate(305deg)"
     }
   ]
 }
