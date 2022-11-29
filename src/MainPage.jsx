@@ -27,6 +27,10 @@ const MainPage = () => {
   const onClickHander2 = () => {
     setOpenMap(2);
     parentRef.current.scrollTo({ left: 1000, top: 700 });
+    setTimeout(() => {
+      setIntervalCount((count) => count + 1);
+      console.log("이동할때 리로드");
+    }, 100);
   };
   const onClickHander3 = () => {
     setOpenMap(3);
@@ -90,7 +94,7 @@ const MainPage = () => {
           </div>
         )}
         {openMap === 1 && <FirstLine />}
-        {openMap === 2 && <SecondLine />}
+        {openMap === 2 && <SecondLine intervalCount={intervalCount} />}
         {openMap === 3 && <ThirdLine />}
       </div>
     </div>

@@ -1,22 +1,16 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import TrainIconBlue from "./TrainIconBlue";
 import TrainIconRed from "./TrainIconRed";
-import axios from "axios";
 import dummy from "../trainLine2.json";
 
-const SecondLine = () => {
+const SecondLine = ({ intervalCount }) => {
   const trainInline = dummy.inLine;
   // const trainOutline = dummy.outLine;
 
-  // const [left, setLeft] = useState("1410px");
-  // const [top, setTop] = useState("955px");
-  // const [display, setDisplay] = useState(false);
-  // const [away, setAway] = useState(true);
-
   let train = [];
-  const [sumin, setSumin] = useState([]);
+  const [inLine, setInLine] = useState([]);
   const inTrainHandler = (data) => {
-    if (!data) return;
     data
       .filter((dataaa) => dataaa.updnLine.includes("1"))
       .map((dataaa, idx) => (train[idx] = dataaa.statnNm));
@@ -30,17 +24,16 @@ const SecondLine = () => {
               key={datat.name}
               left={datat.left}
               top={datat.top}
-              away={false}
+              away={datat.away}
             />
           ))
       );
     }
-    // console.log("haha", haha);
-    setSumin(haha);
+    setInLine(haha);
   };
 
   const [data, setData] = useState(null);
-  const [intervalCount, setIntervalCount] = useState(0);
+  const [itvCount, setItvCount] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -48,22 +41,26 @@ const SecondLine = () => {
           "http://swopenAPI.seoul.go.kr/api/subway/49647867547368693131314c454c4f41/json/realtimePosition/0/40/2호선"
         );
         setData(response.data.realtimePositionList);
-        inTrainHandler(response.data.realtimePositionList);
+        if (data) inTrainHandler(response.data.realtimePositionList);
       } catch (e) {
         console.log(e);
       }
     };
     fetchData();
 
-    setTimeout(() => {
-      setIntervalCount((count) => count + 1);
-    }, 3000);
-    console.log("3초마다 리랜더링");
-  }, [intervalCount]);
-
+    console.log("useEffect 실행");
+  }, [intervalCount, itvCount]);
   if (!data) {
-    return null;
+    console.log("해당하는 데이터가 없습니다.");
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setItvCount((count) => count + 1);
+      console.log("10초마다 리랜더링");
+    }, 10000);
+  }, [itvCount]);
+
   return (
     <div className="numberDiv">
       <div
@@ -73,14 +70,7 @@ const SecondLine = () => {
             "url('https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg2.png')",
         }}
       >
-        {sumin}
-        {/* {data.map((dataaa) => (
-          <div>
-            현재역 : {dataaa.statnNm}, 종착역:{dataaa.statnTnm}, 내선1외선0:
-            {dataaa.updnLine}
-          </div>
-        ))} */}
-        {/* <TrainIconBlue left={"1410px"} top={"955px"} away={false} /> */}
+        {inLine}
         <TrainIconRed
           left={"1350px"}
           top={"875px"}

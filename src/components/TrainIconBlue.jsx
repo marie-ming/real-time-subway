@@ -12,17 +12,7 @@ const TrainDiv = styled.div`
   box-sizing: content-box;
   opacity: 0.6;
   display: inline-block;
-
-  /* ${(props) =>
-    props.display0 &&
-    css`
-      display: none;
-    `}; */
-  ${(props) =>
-    props.away &&
-    css`
-      transform: rotateY(180deg);
-    `}
+  transform: ${(props) => props.away};
 `;
 const Train = styled.img`
   width: 50px;
