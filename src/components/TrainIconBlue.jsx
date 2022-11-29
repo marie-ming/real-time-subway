@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import arroeIcon from "../arrow.png";
 
 const TrainDiv = styled.div`
