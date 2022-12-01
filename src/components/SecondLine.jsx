@@ -6,19 +6,19 @@ import dummy from "../trainLine2.json";
 
 const SecondLine = ({ intervalCount }) => {
   const trainInline = dummy.inLine;
-  // const trainOutline = dummy.outLine;
+  const trainOutline = dummy.outLine;
 
-  let train = [];
+  let train1 = [];
   const [inLine, setInLine] = useState([]);
   const inTrainHandler = (data) => {
     data
       .filter((dataaa) => dataaa.updnLine.includes("1"))
-      .map((dataaa, idx) => (train[idx] = dataaa.statnNm));
+      .map((dataaa, idx) => (train1[idx] = dataaa.statnNm));
     let haha = [];
-    for (let i = 0; i < train.length; i++) {
+    for (let i = 0; i < train1.length; i++) {
       haha.push(
         trainInline
-          .filter((datat) => datat.name.includes(train[i]))
+          .filter((datat) => datat.name.includes(train1[i]))
           .map((datat) => (
             <TrainIconBlue
               key={datat.name}
@@ -32,6 +32,30 @@ const SecondLine = ({ intervalCount }) => {
     setInLine(haha);
   };
 
+  let train0 = [];
+  const [outLine, setOutLine] = useState([]);
+  const outTrainHandler = (data) => {
+    data
+      .filter((dataaa) => dataaa.updnLine.includes("0"))
+      .map((dataaa, idx) => (train0[idx] = dataaa.statnNm));
+    let haha = [];
+    for (let i = 0; i < train0.length; i++) {
+      haha.push(
+        trainOutline
+          .filter((datat) => datat.name.includes(train0[i]))
+          .map((datat) => (
+            <TrainIconRed
+              key={datat.name}
+              left={datat.left}
+              top={datat.top}
+              away={datat.away}
+            />
+          ))
+      );
+    }
+    setOutLine(haha);
+  };
+
   const [data, setData] = useState(null);
   const [itvCount, setItvCount] = useState(0);
   useEffect(() => {
@@ -41,7 +65,10 @@ const SecondLine = ({ intervalCount }) => {
           "http://swopenAPI.seoul.go.kr/api/subway/49647867547368693131314c454c4f41/json/realtimePosition/0/40/2호선"
         );
         setData(response.data.realtimePositionList);
-        if (data) inTrainHandler(response.data.realtimePositionList);
+        if (data) {
+          inTrainHandler(response.data.realtimePositionList);
+          outTrainHandler(response.data.realtimePositionList);
+        }
       } catch (e) {
         console.log(e);
       }
@@ -71,12 +98,7 @@ const SecondLine = ({ intervalCount }) => {
         }}
       >
         {inLine}
-        <TrainIconRed
-          left={"1350px"}
-          top={"875px"}
-          display={false}
-          away={true}
-        />
+        {outLine}
       </div>
     </div>
   );
